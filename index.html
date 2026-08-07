@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#b60000" />
+  <title>Twibbon HUT RI 2026</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div class="eyebrow">NAPOSO BULUNG HKBP DAME</div>
+      <h1>Twibbon Dirgahayu Republik Indonesia</h1>
+      <p>17 Agustus 1945 – 17 Agustus 2026</p>
+    </section>
+
+    <section class="workspace">
+      <div class="canvas-card">
+        <canvas id="twibbonCanvas" width="1254" height="1254" aria-label="Pratinjau twibbon"></canvas>
+        <div id="emptyState" class="empty-state">
+          <strong>Tambahkan foto terbaikmu</strong>
+          <span>Foto dapat digeser, diperbesar, dan diputar.</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label class="upload-btn" for="photoInput">
+          <span>Pilih Foto</span>
+          <input id="photoInput" type="file" accept="image/*" hidden />
+        </label>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Perbesar foto</span>
+            <output id="zoomValue">100%</output>
+          </div>
+          <input id="zoomRange" type="range" min="50" max="300" value="100" />
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Putar foto</span>
+            <output id="rotateValue">0°</output>
+          </div>
+          <input id="rotateRange" type="range" min="-180" max="180" value="0" />
+        </div>
+
+        <div class="button-row">
+          <button id="resetBtn" class="secondary" type="button">Atur Ulang</button>
+          <button id="downloadBtn" class="primary" type="button" disabled>Unduh Twibbon</button>
+        </div>
+
+        <p class="hint">Geser foto langsung pada area pratinjau untuk menyesuaikan posisi.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
